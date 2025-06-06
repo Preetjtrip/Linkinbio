@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Neon Purple Strip */
+.neon-strip {
+  background: linear-gradient(to right, #800080, #da70d6);
+  color: #fff;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  box-shadow: 0 0 15px #800080, 0 0 30px #da70d6;
+}
+
+marquee {
+  color: #ffffff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 12px #cc00cc;
+}
+
+/* Hamburger Floats from Center to Top-Left */
+.menu-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatLeft 1.5s ease-out forwards;
+  animation-delay: 1s;
+  z-index: 10;
+}
+
+@keyframes floatLeft {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    top: 20px;
+    left: 20px;
+    transform: translate(0, 0);
+  }
+}
+
+/* Hamburger Icon */
+.hamburger {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* Dropdown Menu */
+.menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  position: absolute;
+  top: 60px;
+  left: 0;
+}
+
+.menu li {
+  margin: 10px 0;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 20px;
+  display: inline-block;
+  background: #800080;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #800080;
+  transition: background 0.3s;
+}
+
+.menu li a:hover {
+  background: #da70d6;
+}
+
+/* Neon Rotating Cards */
+.card-container {
+  width: 250px;
+  height: 120px;
+  margin: 40px auto;
+  background-color: #111;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #ffffffaa, 0 0 30px #ffffff55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: rotateCard 8s linear infinite;
+}
+
+@keyframes rotateCard {
+  0% { transform: rotateY(0deg); }
+  100% { transform: rotateY(360deg); }
+}
+
+.gumroad-title {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #999999;
+}
