@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Link Bio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Neon Scrolling Strip -->
+  <div class="neon-strip">
+    <marquee behavior="scroll" direction="left" scrollamount="6">
+      Understand machine language and human behaviours with me
+    </marquee>
+  </div>
+
+  <!-- Floating Hamburger Menu -->
+  <div class="menu-container" id="menuContainer">
+    <div class="hamburger" id="hamburger">☰</div>
+    <ul class="menu" id="menu">
+      <li><a href="#">Play</a></li>
+      <li><a href="#">Create</a></li>
+      <li><a href="#">Consume</a></li>
+    </ul>
+  </div>
+
+  <!-- Neon Cards -->
+  <div class="card-container">
+    <a href="https://gumroad.com" target="_blank" class="gumroad-title">GUMROAD</a>
+  </div>
+
+  <div class="card-container">
+    <a href="https://instagram.com/yourprofile" target="_blank" class="gumroad-title">INSTAGRAM</a>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    // Toggle menu manually if needed
+    document.getElementById("hamburger").addEventListener("click", () => {
+      const menu = document.getElementById("menu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+
+    // Auto-show menu after float animation completes
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("menu").style.display = "block";
+      }, 2500); // after float animation ends
+    });
+  </script>
+</body>
+</html>
